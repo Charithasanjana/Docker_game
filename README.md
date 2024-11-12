@@ -105,13 +105,16 @@ Ensure the 2048 game loads correctly and can be played in the browser.
 Common Issues:
 
 Docker Image Build Failures: Ensure that all commands in the Dockerfile execute without errors (e.g., installing dependencies, downloading the game).
+
 Elastic Beanstalk Deployment Issues: Ensure that the Docker image is correctly configured, and check the Elastic Beanstalk logs for any errors.
+
 Useful Commands for Debugging:
-View Docker image logs:
+
+View Docker image logs
 bash
 code
 docker logs <container_id>
-Check AWS Elastic Beanstalk logs:
+Check AWS Elastic Beanstalk logs
 Navigate to the Elastic Beanstalk console and view logs for any deployment errors.
 
 # 7. Conclusion:
@@ -127,5 +130,7 @@ Explore using AWS services like Amazon RDS for game data storage or Amazon Cloud
 # 8. References:
 
 Docker Documentation--https://docs.docker.com/reference/dockerfile/
+
 AWS Elastic Beanstalk Documentation---https://docs.aws.amazon.com/elastic-beanstalk/
+
 GitHub Repository for 2048 Game--https://github.com/gabrielecirulli/2048
