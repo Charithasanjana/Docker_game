@@ -59,11 +59,13 @@ EXPOSE 80
 
 # Start the Nginx service
 CMD ["/usr/sbin/nginx", "-c", "/etc/nginx/nginx.conf"]
+
 Step 3: Build Docker Image
 Build the Docker image using the following command:
 bash
 code
 docker build -t 2048-game .
+
 Step 4: Run the Docker Container Locally
 Run the Docker container on port 80:
 bash
