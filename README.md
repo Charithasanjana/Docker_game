@@ -54,44 +54,42 @@ Create a Dockerfile in the project directory with the following content:
 Dockerfile
 code:
 
-Use Ubuntu 22.04 as base image:
+->Use Ubuntu 22.04 as base image:
 
 FROM ubuntu:22.04
 
-Update and install necessary packages:
+->Update and install necessary packages:
  
 RUN apt-get update
 
 RUN apt-get install -y nginx zip curl
 
-Configure Nginx:
+->Configure Nginx:
  
 RUN echo "daemon off;" >>/etc/nginx/nginx.conf
 
-Download and unzip the game files:
+->Download and unzip the game files:
  
 RUN curl -o /var/www/html/master.zip -L https://codeload.github.com/gabrielecirulli/2048/zip/master
 
 RUN cd /var/www/html/ && unzip master.zip && mv 2048-master/* . && rm -rf 2048-master master.zip
 
-Expose port 80 for web traffic:
+->Expose port 80 for web traffic:
  
 EXPOSE 80
 
-Start the Nginx service:
+->Start the Nginx service:
  
 CMD ["/usr/sbin/nginx", "-c", "/etc/nginx/nginx.conf"]
 
 Step 3: Build Docker Image
 Build the Docker image using the following command:
-bash
-code
+bash code
 docker build -t 2048-game .
 
 Step 4: Run the Docker Container Locally
 Run the Docker container on port 80:
-bash
-Copy code
+bash code
 docker run -d -p 80:80 <image id>
 Verify the game is accessible by opening a browser and navigating to http://localhost.
 
