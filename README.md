@@ -1,7 +1,7 @@
 # Docker_game
 Project Documentation: Dockerized 2048 Game Deployment on AWS
 
-1. Introduction:
+# 1. Introduction:
 
 This project involves containerizing a simple game, 2048, within a Docker container, and deploying it to AWS using Elastic Beanstalk. The project demonstrates containerization with Docker, cloud deployment, and basic web application development.
 
@@ -17,7 +17,7 @@ Nginx: Web server to serve the game.
 GitHub: Hosting the game repository.
 Curl & Zip utilities: For downloading and extracting game files.
 
-2. Architecture Overview:
+# 2. Architecture Overview:
 
 The project architecture consists of two main components:
 
@@ -28,7 +28,7 @@ Cloud Deployment (AWS Elastic Beanstalk):
 The Docker container is deployed to AWS using Elastic Beanstalk.
 Elastic Beanstalk manages the deployment, scaling, and monitoring of the application.
 
-3. Step-by-Step Implementation:
+# 3. Step-by-Step Implementation:
    
 Step 1: Setting Up the Project Directory
 Create a new folder for the project:
@@ -39,25 +39,25 @@ cd 2048-game
 Step 2: Dockerfile Creation
 Create a Dockerfile in the project directory with the following content:
 Dockerfile
-code
-#Use Ubuntu 22.04 as base image
+code:
+Use Ubuntu 22.04 as base image
 FROM ubuntu:22.04
 
-# Update and install necessary packages
+ Update and install necessary packages
 RUN apt-get update
 RUN apt-get install -y nginx zip curl
 
-# Configure Nginx
+ Configure Nginx
 RUN echo "daemon off;" >>/etc/nginx/nginx.conf
 
-# Download and unzip the game files
+ Download and unzip the game files
 RUN curl -o /var/www/html/master.zip -L https://codeload.github.com/gabrielecirulli/2048/zip/master
 RUN cd /var/www/html/ && unzip master.zip && mv 2048-master/* . && rm -rf 2048-master master.zip
 
-# Expose port 80 for web traffic
+ Expose port 80 for web traffic
 EXPOSE 80
 
-# Start the Nginx service
+ Start the Nginx service
 CMD ["/usr/sbin/nginx", "-c", "/etc/nginx/nginx.conf"]
 
 Step 3: Build Docker Image
@@ -73,7 +73,7 @@ Copy code
 docker run -d -p 80:80 <image id>
 Verify the game is accessible by opening a browser and navigating to http://localhost.
 
-4. Deploying to AWS Elastic Beanstalk:
+# 4. Deploying to AWS Elastic Beanstalk:
 
 Step 1: Prepare for AWS Deployment
 Log in to AWS Console and navigate to Elastic Beanstalk.
@@ -91,12 +91,12 @@ Step 3: Deploy the Application
 After uploading the Dockerfile, Elastic Beanstalk will automatically deploy the container.
 Once deployment is complete, Elastic Beanstalk will provide a URL where the game can be accessed online.
 
-5. Testing the Application:
+# 5. Testing the Application:
    
 After the Elastic Beanstalk deployment is finished, visit the provided URL (e.g., http://clone-env.eba-tgnemzht.us-east-1.elasticbeanstalk.com/).
 Ensure the 2048 game loads correctly and can be played in the browser.
 
-6. Troubleshooting:
+# 6. Troubleshooting:
 
 Common Issues:
 Docker Image Build Failures: Ensure that all commands in the Dockerfile execute without errors (e.g., installing dependencies, downloading the game).
@@ -109,7 +109,7 @@ docker logs <container_id>
 Check AWS Elastic Beanstalk logs:
 Navigate to the Elastic Beanstalk console and view logs for any deployment errors.
 
-7. Conclusion:
+# 7. Conclusion:
 
 This project successfully demonstrates how to containerize a simple game using Docker and deploy it on AWS using Elastic Beanstalk. It serves as a basic yet effective example for understanding the integration of containerization and cloud services in a DevOps workflow.
 
@@ -118,7 +118,7 @@ Implement CI/CD pipelines for automated Docker image builds and deployments.
 Enhance the game with additional features or interactive elements.
 Explore using AWS services like Amazon RDS for game data storage or Amazon CloudWatch for monitoring.
 
-8. References:
+# 8. References:
 
 Docker Documentation--https://docs.docker.com/reference/dockerfile/
 AWS Elastic Beanstalk Documentation---https://docs.aws.amazon.com/elastic-beanstalk/
