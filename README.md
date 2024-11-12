@@ -96,7 +96,8 @@ Once deployment is complete, Elastic Beanstalk will provide a URL where the game
 After the Elastic Beanstalk deployment is finished, visit the provided URL (e.g., http://clone-env.eba-tgnemzht.us-east-1.elasticbeanstalk.com/).
 Ensure the 2048 game loads correctly and can be played in the browser.
 
-6. Troubleshooting
+6. Troubleshooting:
+
 Common Issues:
 Docker Image Build Failures: Ensure that all commands in the Dockerfile execute without errors (e.g., installing dependencies, downloading the game).
 Elastic Beanstalk Deployment Issues: Ensure that the Docker image is correctly configured, and check the Elastic Beanstalk logs for any errors.
@@ -108,7 +109,8 @@ docker logs <container_id>
 Check AWS Elastic Beanstalk logs:
 Navigate to the Elastic Beanstalk console and view logs for any deployment errors.
 
-7. Conclusion
+7. Conclusion:
+
 This project successfully demonstrates how to containerize a simple game using Docker and deploy it on AWS using Elastic Beanstalk. It serves as a basic yet effective example for understanding the integration of containerization and cloud services in a DevOps workflow.
 
 Additional Steps:
@@ -116,7 +118,8 @@ Implement CI/CD pipelines for automated Docker image builds and deployments.
 Enhance the game with additional features or interactive elements.
 Explore using AWS services like Amazon RDS for game data storage or Amazon CloudWatch for monitoring.
 
-8. References
+8. References:
+
 Docker Documentation--https://docs.docker.com/reference/dockerfile/
 AWS Elastic Beanstalk Documentation---https://docs.aws.amazon.com/elastic-beanstalk/
 GitHub Repository for 2048 Game--https://github.com/gabrielecirulli/2048
