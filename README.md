@@ -1,7 +1,7 @@
 # Docker_game
 Project Documentation: Dockerized 2048 Game Deployment on AWS
 
-1. Introduction
+1. Introduction:
 
 This project involves containerizing a simple game, 2048, within a Docker container, and deploying it to AWS using Elastic Beanstalk. The project demonstrates containerization with Docker, cloud deployment, and basic web application development.
 
@@ -17,7 +17,7 @@ Nginx: Web server to serve the game.
 GitHub: Hosting the game repository.
 Curl & Zip utilities: For downloading and extracting game files.
 
-2. Architecture Overview
+2. Architecture Overview:
 
 The project architecture consists of two main components:
 
@@ -28,7 +28,8 @@ Cloud Deployment (AWS Elastic Beanstalk):
 The Docker container is deployed to AWS using Elastic Beanstalk.
 Elastic Beanstalk manages the deployment, scaling, and monitoring of the application.
 
-3. Step-by-Step Implementation
+3. Step-by-Step Implementation:
+   
 Step 1: Setting Up the Project Directory
 Create a new folder for the project:
 bash
@@ -58,14 +59,11 @@ EXPOSE 80
 
 # Start the Nginx service
 CMD ["/usr/sbin/nginx", "-c", "/etc/nginx/nginx.conf"]
-
-
 Step 3: Build Docker Image
 Build the Docker image using the following command:
 bash
 code
 docker build -t 2048-game .
-
 Step 4: Run the Docker Container Locally
 Run the Docker container on port 80:
 bash
@@ -73,7 +71,8 @@ Copy code
 docker run -d -p 80:80 <image id>
 Verify the game is accessible by opening a browser and navigating to http://localhost.
 
-4. Deploying to AWS Elastic Beanstalk
+4. Deploying to AWS Elastic Beanstalk:
+
 Step 1: Prepare for AWS Deployment
 Log in to AWS Console and navigate to Elastic Beanstalk.
 
@@ -82,7 +81,6 @@ Create a new Elastic Beanstalk application:
 Choose the application name (e.g., 2048-game).
 Select the environment as Docker.
 Upload the Dockerfile from your local device:
-
 In the Elastic Beanstalk console, select the "Upload your code" option and upload the Dockerfile.
 Step 2: Configure the Elastic Beanstalk Environment
 Choose the platform as Docker and ensure you are using the latest version.
@@ -90,7 +88,9 @@ You can leave the environment configuration as default or customize based on you
 Step 3: Deploy the Application
 After uploading the Dockerfile, Elastic Beanstalk will automatically deploy the container.
 Once deployment is complete, Elastic Beanstalk will provide a URL where the game can be accessed online.
-5. Testing the Application
+
+5. Testing the Application:
+   
 After the Elastic Beanstalk deployment is finished, visit the provided URL (e.g., http://clone-env.eba-tgnemzht.us-east-1.elasticbeanstalk.com/).
 Ensure the 2048 game loads correctly and can be played in the browser.
 
