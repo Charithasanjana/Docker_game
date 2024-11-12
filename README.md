@@ -42,9 +42,12 @@ Elastic Beanstalk manages the deployment, scaling, and monitoring of the applica
 # 3. Step-by-Step Implementation:
    
 Step 1: Setting Up the Project Directory
+
 Create a new folder for the project:
+
 bash
 code:
+
 mkdir 2048-game
 cd 2048-game
 
