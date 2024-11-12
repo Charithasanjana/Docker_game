@@ -160,4 +160,4 @@ Docker Documentation--https://docs.docker.com/reference/dockerfile/
 
 AWS Elastic Beanstalk Documentation---https://docs.aws.amazon.com/elastic-beanstalk/
 
-GitHub Repository for 2048 Game--https://github.com/gabrielecirulli/2048
+GitHub Repository for 2048 Game--https://github.com/gabrielecirulli/2048 
