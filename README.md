@@ -52,24 +52,33 @@ Step 2: Dockerfile Creation
 Create a Dockerfile in the project directory with the following content:
 Dockerfile
 code:
+
 Use Ubuntu 22.04 as base image
+
 FROM ubuntu:22.04
 
  Update and install necessary packages
+ 
 RUN apt-get update
+
 RUN apt-get install -y nginx zip curl
 
  Configure Nginx
+ 
 RUN echo "daemon off;" >>/etc/nginx/nginx.conf
 
  Download and unzip the game files
+ 
 RUN curl -o /var/www/html/master.zip -L https://codeload.github.com/gabrielecirulli/2048/zip/master
+
 RUN cd /var/www/html/ && unzip master.zip && mv 2048-master/* . && rm -rf 2048-master master.zip
 
  Expose port 80 for web traffic
+ 
 EXPOSE 80
 
  Start the Nginx service
+ 
 CMD ["/usr/sbin/nginx", "-c", "/etc/nginx/nginx.conf"]
 
 Step 3: Build Docker Image
