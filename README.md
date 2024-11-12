@@ -138,8 +138,8 @@ Elastic Beanstalk Deployment Issues: Ensure that the Docker image is correctly c
 Useful Commands for Debugging:
 
 View Docker image logs,
-bash,
-code,
+bash
+code
 docker logs <container_id>,
 Check AWS Elastic Beanstalk logs,
 Navigate to the Elastic Beanstalk console and view logs for any deployment errors.
