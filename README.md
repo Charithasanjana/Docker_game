@@ -36,6 +36,7 @@ bash
 code:
 mkdir 2048-game
 cd 2048-game
+
 Step 2: Dockerfile Creation
 Create a Dockerfile in the project directory with the following content:
 Dockerfile
