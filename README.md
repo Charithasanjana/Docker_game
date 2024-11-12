@@ -5,16 +5,26 @@ Project Documentation: Dockerized 2048 Game Deployment on AWS
 
 This project involves containerizing a simple game, 2048, within a Docker container, and deploying it to AWS using Elastic Beanstalk. The project demonstrates containerization with Docker, cloud deployment, and basic web application development.
 
-Project Objectives:
+->Project Objectives:
+
 Create a Docker container for hosting the 2048 game.
+
 Deploy the Docker container to AWS using Elastic Beanstalk.
+
 Learn DevOps concepts like containerization, image building, and cloud deployment.
-Tools & Technologies Used:
+
+->Tools & Technologies Used:
+
 Docker: For containerization of the game application.
+
 AWS Elastic Beanstalk: For cloud deployment.
+
 Ubuntu 22.04: Base Docker image.
+
 Nginx: Web server to serve the game.
+
 GitHub: Hosting the game repository.
+
 Curl & Zip utilities: For downloading and extracting game files.
 
 # 2. Architecture Overview:
@@ -110,11 +120,11 @@ Elastic Beanstalk Deployment Issues: Ensure that the Docker image is correctly c
 
 Useful Commands for Debugging:
 
-View Docker image logs
-bash
-code
-docker logs <container_id>
-Check AWS Elastic Beanstalk logs
+View Docker image logs,
+bash,
+code,
+docker logs <container_id>,
+Check AWS Elastic Beanstalk logs,
 Navigate to the Elastic Beanstalk console and view logs for any deployment errors.
 
 # 7. Conclusion:
