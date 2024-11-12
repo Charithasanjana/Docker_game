@@ -24,6 +24,7 @@ The project architecture consists of two main components:
 Local Development Environment (Docker):
 The Docker container hosts the 2048 game, using an Nginx server to serve the game via a web interface.
 The Docker container listens on port 80.
+
 Cloud Deployment (AWS Elastic Beanstalk):
 The Docker container is deployed to AWS using Elastic Beanstalk.
 Elastic Beanstalk manages the deployment, scaling, and monitoring of the application.
@@ -85,9 +86,11 @@ Choose the application name (e.g., 2048-game).
 Select the environment as Docker.
 Upload the Dockerfile from your local device:
 In the Elastic Beanstalk console, select the "Upload your code" option and upload the Dockerfile.
+
 Step 2: Configure the Elastic Beanstalk Environment
 Choose the platform as Docker and ensure you are using the latest version.
 You can leave the environment configuration as default or customize based on your needs.
+
 Step 3: Deploy the Application
 After uploading the Dockerfile, Elastic Beanstalk will automatically deploy the container.
 Once deployment is complete, Elastic Beanstalk will provide a URL where the game can be accessed online.
@@ -100,6 +103,7 @@ Ensure the 2048 game loads correctly and can be played in the browser.
 # 6. Troubleshooting:
 
 Common Issues:
+
 Docker Image Build Failures: Ensure that all commands in the Dockerfile execute without errors (e.g., installing dependencies, downloading the game).
 Elastic Beanstalk Deployment Issues: Ensure that the Docker image is correctly configured, and check the Elastic Beanstalk logs for any errors.
 Useful Commands for Debugging:
@@ -115,6 +119,7 @@ Navigate to the Elastic Beanstalk console and view logs for any deployment error
 This project successfully demonstrates how to containerize a simple game using Docker and deploy it on AWS using Elastic Beanstalk. It serves as a basic yet effective example for understanding the integration of containerization and cloud services in a DevOps workflow.
 
 Additional Steps:
+
 Implement CI/CD pipelines for automated Docker image builds and deployments.
 Enhance the game with additional features or interactive elements.
 Explore using AWS services like Amazon RDS for game data storage or Amazon CloudWatch for monitoring.
