@@ -111,6 +111,7 @@ Create a new Elastic Beanstalk application:
 Choose the application name (e.g., 2048-game).
 Select the environment as Docker.
 Upload the Dockerfile from your local device:
+
 In the Elastic Beanstalk console, select the "Upload your code" option and upload the Dockerfile.
 
 Step 2: Configure the Elastic Beanstalk Environment
